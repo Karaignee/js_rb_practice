@@ -24,24 +24,18 @@ today = dd+'/'+mm+'/'+yyyy;
 console.log(today);  
 
 
-//get the area of a triangle using herons
+//days till christmas
 
-var side1 = 5; 
-var side2 = 6; 
-var side3 = 7; 
-var perimeter = (side1 + side2 + side3)/2;
-var area =  Math.sqrt(perimeter*((perimeter-side1)*(perimeter-side2)*(perimeter-side3)));
-console.log(area);
+today=new Date();  
+var christmas=new Date(today.getFullYear(), 11, 25);  
+if (today.getMonth()==11 && today.getDate()>25)   
+{  
+christmas.setFullYear(christmas.getFullYear()+1);   
+}    
+var one_day=1000*60*60*24;  
+console.log(Math.ceil((christmas.getTime()-today.getTime())/(one_day))+  
+" days left until Christmas!"); 
 
-//this is faulty and I don't know why:
-// side1 = window.prompt("Input a side1 : "); 
-// side2 = window.prompt("Input a side2 : "); 
-// side1 = window.prompt("Input a side3 : "); 
-// var perimeter = (side1 + side2 + side3)/2;
-// var area =  Math.sqrt(perimeter*((perimeter-side1)*(perimeter-side2)*(perimeter-side3)));
-// console.log(area);
-
-console.log('********next**********');
 
 // is it a Leap year?
 
