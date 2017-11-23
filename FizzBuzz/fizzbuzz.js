@@ -1,9 +1,9 @@
 //neat fizzbuzz
 for (var i = 1; i <= 100; i++) {
-    var expletive = '';
-    if (i % 3 === 0) expletive = 'Fizz'; //the += append
-    if (i % 5 === 0) expletive += 'Buzz';
-    console.log(expletive || i);
+    var expletive = ''; //declare a var which is an empty string
+    if (i % 3 === 0) expletive = 'Fizz'; // if divisible by 3 var/string is Fizz
+    if (i % 5 === 0) expletive += 'Buzz'; //if divisible by 5 the string Buzz is given or added
+    console.log(expletive || i); //print the var or the number
 }
 
 //how come it prints FizzBuzz for the combination of the two if statements? ->
@@ -14,7 +14,7 @@ for (var i = 1; i <= 100; i++) {
 //in a function, loop and if statement
 
 function fizzBuzz(){
-	for(var i=1;i<=100;i++){
+	for(var i = 1; i <= 100; i++){
 		if(i%5 === 0 && i%3 === 0){
 			print('FizzBuzz');
 		} else if(i%3 === 0){
@@ -100,4 +100,4 @@ function fizzBuzz(){
 		}
 		console.log(output);
 	}
-}  //I'm still a bit unclear about the default merged FizzBuzz output
+} 
